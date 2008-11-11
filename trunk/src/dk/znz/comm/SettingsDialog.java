@@ -302,23 +302,6 @@ public class SettingsDialog extends javax.swing.JDialog {
         //updateCommPorts((DefaultComboBoxModel)comPortComboBox.getModel());
 }//GEN-LAST:event_portComboBoxPopupMenuWillBecomeVisible
 
-    /**
-    * @param args the command line arguments
-    */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                SettingsDialog dialog = new SettingsDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox baudRateComboBox;
     private javax.swing.JLabel baudRateLabel;
