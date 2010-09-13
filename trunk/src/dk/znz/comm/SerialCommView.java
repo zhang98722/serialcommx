@@ -473,3 +473,5 @@ public class SerialCommView extends FrameView {
     private int busyIconIndex = 0;
     private JDialog aboutBox;
 }
+
+
