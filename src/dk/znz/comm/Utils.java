@@ -2,6 +2,8 @@ package dk.znz.comm;
 
 import com.sun.jna.Native;
 import com.sun.jna.win32.StdCallLibrary;
+import gnu.io.CommPortIdentifier;
+import gnu.io.RXTXCommDriver;
 
 /** Simple example of JNA interface mapping and usage. */
 public class Utils {

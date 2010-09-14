@@ -1,9 +1,10 @@
 /*
  * SerialCommApp.java
  */
-
 package dk.znz.comm;
 
+import gnu.io.CommPortIdentifier;
+import java.util.Enumeration;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
@@ -15,7 +16,8 @@ public class SerialCommApp extends SingleFrameApplication {
     /**
      * At startup create and show the main frame of the application.
      */
-    @Override protected void startup() {
+    @Override
+    protected void startup() {
         show(new SerialCommView(this));
     }
 
@@ -24,7 +26,8 @@ public class SerialCommApp extends SingleFrameApplication {
      * Windows shown in our application come fully initialized from the GUI
      * builder, so this additional configuration is not needed.
      */
-    @Override protected void configureWindow(java.awt.Window root) {
+    @Override
+    protected void configureWindow(java.awt.Window root) {
     }
 
     /**
@@ -39,6 +42,10 @@ public class SerialCommApp extends SingleFrameApplication {
      * Main method launching the application.
      */
     public static void main(String[] args) {
-        launch(SerialCommApp.class, args);
+        //launch(SerialCommApp.class, args);
+        for (Enumeration e = CommPortIdentifier.getPortIdentifiers(); e.hasMoreElements();) {
+            CommPortIdentifier commPortIdentifier = (CommPortIdentifier)e.nextElement();
+            System.out.println(commPortIdentifier.getName());
+        }
     }
 }
