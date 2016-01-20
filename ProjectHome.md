@@ -1,0 +1,2 @@
+A serial communications GUI. This program should be cross platform and is implemented in Java, using Swing for UI and rxtx.org's COMM api (gnu.io) for the actual data communication.
+Later features to be added should be some sort of dynamic macros, maybe implemented through JRuby.
